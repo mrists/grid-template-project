@@ -1,0 +1,33 @@
+.about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  letter-spacing: 0.055em;
+
+  background-color: $color-gray-light;
+  &__container {
+    display: grid;
+
+    @extend %container;
+    gap: 100px;
+    grid-template-columns: 1fr 271px;
+  }
+  &__content {
+    display: inline;
+
+    color: $color-gray;
+
+    font-family: "Roboto";
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+  &__image {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  &__image img {
+    max-width: 100%;
+    max-height: 480px;
+  }
+}

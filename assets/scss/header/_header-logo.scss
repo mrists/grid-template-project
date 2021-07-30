@@ -1,0 +1,19 @@
+.header-logo {
+  letter-spacing: 0.22em;
+
+  font-size: 1.5rem;
+  font-weight: 400;
+  &__link {
+    display: block;
+
+    padding: $gap $gap $gap 0;
+  }
+  &__accent {
+    display: inline-block;
+
+    margin-right: 4px;
+    padding: 14px 1px 13px 5px;
+
+    border: 3px solid $color-highlight;
+  }
+}

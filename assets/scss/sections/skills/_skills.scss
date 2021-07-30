@@ -1,0 +1,36 @@
+.skills {
+  @include sm-min {
+    padding: 10px 10px 30px 10px;
+  }
+  @include sm {
+      padding: $gap;
+  }
+  &__container {
+    display: grid;
+
+    margin: 0 0 $gap 0;
+
+    @include sm-min {
+      grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+      grid-template-columns: repeat(4, 1fr);
+      gap: $gap / 2;
+    }
+    @include lg-md {
+        grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9" ;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include md-sm {
+      grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      gap: $gap;
+      grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+      grid-template-columns: 1fr;
+    }
+  }
+  &__action {
+    display: flex;
+    justify-content: center;
+  }
+}

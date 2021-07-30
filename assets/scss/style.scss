@@ -1,0 +1,54 @@
+
+@import "../../libs/normalize.css/normalize.scss";
+@import "skin";
+@import "variables";
+@import "mixins";
+@import "mixins-media";
+@import "extends";
+
+@import "common";
+@import "header/header";
+@import "header/header-overlay";
+@import "header/header-menu";
+@import "header/header-logo";
+@import "header/header-navbar";
+@import "header/header-content";
+
+@import "sections/skills/skill-item";
+@import "sections/skills/_skills";
+@import "sections/section-about";
+@import "sections/section-form";
+@import "sections/section-posts";
+
+@import "footer";
+
+
+
+// @media (min-width: 992px) {
+//   .about__content p:first-of-type::after {
+//     right: -50px;
+// }
+// }
+// .about__content p:first-of-type::after {
+//     position: absolute;
+//     top: 0;
+//     width: 2px;
+//     height: 200px;
+//     content: "";
+//     background-color: rgba(99, 117, 136, 0.1);
+// }
+
+
+
+
+
+// @media (max-height: 691px) {
+//   .skill-item {
+//     min-height: calc(33.33vh - 13.33333px);
+//   }
+// }
+// @media (max-height: 690px) {
+//   .skill-item {
+//     min-height: calc(230px - 13.33333px);
+//   }
+// }

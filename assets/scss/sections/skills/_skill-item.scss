@@ -1,0 +1,81 @@
+.skill-item {
+  position: relative;
+
+  overflow: hidden;
+
+  @media (min-height: 691px) {
+    min-height: calc(33.33vh - 13.33333px);
+  }
+  @media (max-height: 690px) {
+    min-height: calc(230px - 13.33333px);
+  }
+  &__image {
+    position: absolute;
+
+    transition: transform 0.5s;
+
+    background-color: $color-primary;
+    background-position: center;
+    background-size: cover;
+
+    inset: 0;
+  }
+  &__title {
+    position: absolute;
+    z-index: 2;
+
+    height: 100%;
+    margin: 0;
+
+    letter-spacing: 0.1em;
+
+    inset: 0;
+    @include md-min {
+    font-size: 1.25rem;
+  }    
+    @include md {
+    font-size: 1.125rem;
+  }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    padding: 0 $gap;
+
+    transition: color 0.5s;
+  }
+  &__overlay {
+    position: absolute;
+
+    transition: opacity 0.5s;
+
+    opacity: 0.8;
+    background-color: $color-primary;
+
+    inset: 0;
+  }
+  &:hover {
+    .skill-item {
+      &__image {
+        transform: scale(1.1);
+      }
+      &__link {
+        color: $color-accent;
+      }
+      &__overlay {
+        opacity: 0.95 !important;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 9 {
+  .skill-item:nth-of-type(#{$i}){ 
+    grid-area: a#{$i}; 
+  }
+}
+
+

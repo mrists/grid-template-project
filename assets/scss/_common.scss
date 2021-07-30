@@ -1,0 +1,111 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+
+  color: $color-gray;
+
+  font-family: $font-main;
+  font-size: $font-size;
+}
+
+h1 {
+  letter-spacing: 0.08em;
+
+  color: $color-light;
+
+  font-family: $font-header;
+  font-size: 3.75rem;
+  font-weight: 300;
+  @include lg-min {
+    font-size: 3.75rem;
+  }
+  @include lg-md {
+    font-size: 2.5rem;
+  }
+  @include md {
+    font-size: 1.875rem;
+  }
+    
+  
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+
+  color: $color-light;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.5s;
+
+
+  color: $color-light;
+  &--light {
+    border: 2px solid $color-light;
+    background-color: rgba($color-light, 0.1);
+
+    
+    @include lg-min {
+      min-width: 250px;
+      height: 60px;
+      font-size: 1.125rem;
+    }
+    @include lg-md {
+      min-width: 200px;
+      height: 50px;
+
+      font-size: 1rem;
+    }
+    @include md-min {
+      letter-spacing: 0.1em;
+    }
+    @include md {
+      min-width: 170px;
+      height: 40px;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+    }
+  }
+  &--primary {
+    height: 60px;
+    letter-spacing: 0.1em;
+
+    border: 2px solid $color-primary;
+    background-color: rgba($color-primary, 0.8);
+
+    font-size: 1.125rem;
+    @include sm-min {
+      min-width: 350px;
+    }
+    @include sm {
+      min-width: 100%;
+    }
+  }
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+}
+
+h2 {
+  letter-spacing: 4px;
+
+  color: $color-primary;
+
+  font-family: "Roboto Slab";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+}
