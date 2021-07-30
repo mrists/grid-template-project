@@ -7,27 +7,47 @@
   background-color: $color-gray-light;
   &__container {
     display: grid;
+    align-items: center;
 
     @extend %container;
     gap: 100px;
     grid-template-columns: 1fr 271px;
   }
   &__content {
-    display: inline;
-
-    color: $color-gray;
-
     font-family: "Roboto";
     font-size: 1.125rem;
     font-weight: 400;
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    p:first-of-type {
+      
+      position: relative;
+      margin-top: -5px;
+      &::after {
+      @include lg-min {
+          right: -50px;
+        }
+      position: absolute;
+      top: 0;
+      width: 2px;
+      height: 200px;
+      content: "";
+      background-color: rgba(99, 117, 136, 0.1);
+      }
+  }
   }
   &__image {
     display: grid;
-    align-items: center;
-    justify-content: center;
-  }
-  &__image img {
-    max-width: 100%;
-    max-height: 480px;
+    align-content: center;
+    justify-items: center;
+  
+
+    img {
+      max-width: 100%;
+      max-height: 480px;
+    }
   }
 }

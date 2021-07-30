@@ -5,10 +5,7 @@
 }
 
 html {
-  overflow-y: scroll;
-
   color: $color-gray;
-
   font-family: $font-main;
   font-size: $font-size;
 }
@@ -108,4 +105,5 @@ h2 {
   font-size: 40px;
   font-weight: 700;
   line-height: 48px;
+  margin: 0px 0px 48px 0px;
 }
