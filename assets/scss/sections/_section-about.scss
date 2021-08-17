@@ -1,49 +1,94 @@
 .about {
-  padding-top: 100px;
-  padding-bottom: 100px;
-
   letter-spacing: 0.055em;
 
   background-color: $color-gray-light;
+
+  @include lg-min {
+    padding: $gap * 5 0;
+  }
+  @include lg-md {
+    padding: $gap * 4 0;
+  }
+  @include md {
+    padding: $gap * 3 0;
+  }
+  h2 {
+    margin-top: 0;
+  }
   &__container {
     display: grid;
     align-items: center;
 
     @extend %container;
-    gap: 100px;
-    grid-template-columns: 1fr 271px;
+    @include lg-min {
+      gap: $gap * 5;
+      grid-template-columns: 1fr 271px;
+    }
+    @include lg-md {
+      gap: $gap * 2;
+      grid-template-columns: 1fr 271px;
+    }
+    @include md-sm {
+      gap: $gap;
+      grid-template-columns: 1fr 236px;
+    }
+    @include sm {
+      gap: $gap;
+      grid-template-columns: 1fr;
+    }
   }
   &__content {
     font-family: "Roboto";
     font-size: 1.125rem;
     font-weight: 400;
 
+    @include lg-min {
+      font-size: 1.125rem;
+    }
+    @include lg {
+      font-size: 1rem;
+    }
+
     p:last-of-type {
       margin-bottom: 0;
     }
 
     p:first-of-type {
-      
       position: relative;
+
       margin-top: -5px;
       &::after {
-      @include lg-min {
-          right: -50px;
+        position: absolute;
+        top: 0;
+
+        width: 2px;
+        height: 200px;
+
+        content: "";
+
+        background-color: rgba(99, 117, 136, 0.1);
+
+        @include lg-min {
+          right: -$gap * 2.5;
         }
-      position: absolute;
-      top: 0;
-      width: 2px;
-      height: 200px;
-      content: "";
-      background-color: rgba(99, 117, 136, 0.1);
+        @include lg-md {
+          right: -$gap;
+        }
+        @include md-sm {
+          right: -$gap / 2;
+        }
+        @include sm {
+          display: none;
+        }
       }
-  }
+    }
   }
   &__image {
     display: grid;
     align-content: center;
+
     justify-items: center;
-  
+
 
     img {
       max-width: 100%;

@@ -6,6 +6,7 @@
 
 html {
   color: $color-gray;
+
   font-family: $font-main;
   font-size: $font-size;
 }
@@ -18,6 +19,7 @@ h1 {
   font-family: $font-header;
   font-size: 3.75rem;
   font-weight: 300;
+
   @include lg-min {
     font-size: 3.75rem;
   }
@@ -27,8 +29,6 @@ h1 {
   @include md {
     font-size: 1.875rem;
   }
-    
-  
 }
 ul {
   list-style: none;
@@ -45,18 +45,17 @@ a {
   align-items: center;
   justify-content: center;
 
-  transition: background-color 0.5s;
-
+  transition: background-color 0.5s, border-color 0.5s;
 
   color: $color-light;
   &--light {
     border: 2px solid $color-light;
     background-color: rgba($color-light, 0.1);
 
-    
     @include lg-min {
       min-width: 250px;
       height: 60px;
+
       font-size: 1.125rem;
     }
     @include lg-md {
@@ -71,21 +70,22 @@ a {
     @include md {
       min-width: 170px;
       height: 40px;
-      font-size: 1rem;
+
       letter-spacing: 0.05em;
+
+      font-size: 1rem;
     }
   }
   &--primary {
     height: 60px;
+
     letter-spacing: 0.1em;
 
     border: 2px solid $color-primary;
     background-color: rgba($color-primary, 0.8);
 
     font-size: 1.125rem;
-    @include sm-min {
-      min-width: 350px;
-    }
+
     @include sm {
       min-width: 100%;
     }
@@ -97,13 +97,46 @@ a {
 }
 
 h2 {
-  letter-spacing: 4px;
-
   color: $color-primary;
 
   font-family: "Roboto Slab";
-  font-size: 40px;
   font-weight: 700;
-  line-height: 48px;
-  margin: 0px 0px 48px 0px;
+  line-height: 1.2em;
+
+  @include lg-min {
+    margin-bottom: 3rem;
+
+    letter-spacing: 4px;
+
+    font-size: 2.5rem;
+  }
+  @include lg-md {
+    margin-bottom: 2.625rem;
+
+    letter-spacing: 3px;
+
+    font-size: 2rem;
+  }
+  @include md-sm {
+    margin-bottom: 2.25rem;
+
+    letter-spacing: 0.1em;
+
+    font-size: 1.5rem;
+  }
+  @include sm {
+    margin-bottom: 2.25rem;
+
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    font-size: 1.5rem;
+  }
+}
+
+*:active,
+*:hover,
+*:focus {
+  outline: 0;
+  outline-offset: 0;
 }

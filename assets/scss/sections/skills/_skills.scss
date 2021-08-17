@@ -3,7 +3,7 @@
     padding: 10px 10px 40px 10px;
   }
   @include sm {
-      padding: $gap;
+    padding: $gap;
   }
   &__container {
     display: grid;
@@ -11,13 +11,13 @@
     margin: 0 0 $gap 0;
 
     @include sm-min {
+      gap: $gap / 2;
       grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
       grid-template-columns: repeat(4, 1fr);
-      gap: $gap / 2;
     }
     @include lg-md {
-        grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9" ;
-        grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9" ;
+      grid-template-columns: repeat(3, 1fr);
     }
     @include md-sm {
       grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
@@ -32,5 +32,10 @@
   &__action {
     display: flex;
     justify-content: center;
+    .btn--primary {
+      @include sm-min {
+        min-width: 350px;
+      }
+    }
   }
 }

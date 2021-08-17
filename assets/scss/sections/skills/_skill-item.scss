@@ -29,13 +29,13 @@
 
     letter-spacing: 0.1em;
 
-    inset: 0;
     @include md-min {
-    font-size: 1.25rem;
-  }    
+      font-size: 1.25rem;
+    }
     @include md {
-    font-size: 1.125rem;
-  }
+      font-size: 1.125rem;
+    }
+    inset: 0;
   }
   &__link {
     display: flex;
@@ -73,9 +73,7 @@
 }
 
 @for $i from 1 through 9 {
-  .skill-item:nth-of-type(#{$i}){ 
-    grid-area: a#{$i}; 
+  .skill-item:nth-of-type(#{$i}) {
+    grid-area: a#{$i};
   }
 }
-
-

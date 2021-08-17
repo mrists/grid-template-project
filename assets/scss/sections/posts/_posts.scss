@@ -1,0 +1,76 @@
+.posts {
+  @include lg-min {
+    padding: $gap * 5 0;
+  }
+  @include lg-md {
+    padding: $gap * 4 0;
+  }
+  @include md {
+    padding: $gap * 3 0;
+  }
+  h2 {
+    margin-top: 0;
+  }
+
+  h3 {
+    margin: 18px 0;
+
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    color: $color-gray;
+
+    font-family: $font-header;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+  }
+
+  p {
+    margin: 16px 0;
+
+    text-align: center;
+
+    color: $color-gray;
+
+    font-weight: 400;
+  }
+  &__container {
+    @extend %container;
+  }
+  &__grid {
+    display: grid;
+
+    padding-bottom: $gap;
+
+    gap: $gap;
+    @include lg-min {
+      grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include lg-md {
+      grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p5 p6";
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include md-sm {
+      grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
+      grid-template-columns: 1fr;
+    }
+  }
+  &__action {
+    display: grid;
+
+    @include sm-min {
+      justify-content: center;
+    }
+    .btn--primary {
+      @include sm-min {
+        min-width: 350px;
+      }
+    }
+  }
+}
